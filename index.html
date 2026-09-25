@@ -83,7 +83,7 @@ const products=[
 ['bestway-layz-zurich','Bestway','Lay-Z-Spa Zurich EnergySense',426,277,'garten','https://www.domorra.store/products/card/bestway-layz-zurich.jpg',4.8,3]
 ].map(x=>({slug:x[0],brand:x[1],name:x[2],old:x[3],price:x[4],cat:x[5],img:x[6],rating:x[7],reviews:x[8]}));
 products.push(...(window.GARTENHAUS_PRODUCTS||[]));
-products.forEach(p=>{p.price=Math.round(p.price*.7*100)/100});
+products.forEach(p=>{p.price=p.slug==='navimow-i105e'?499.99:Math.round(p.old*.95*100)/100});
 const subcategoryByProduct={
   'navimow-i105e':'maehroboter',
   'navimow-i205-awd':'maehroboter','navimow-i208-awd':'maehroboter',
